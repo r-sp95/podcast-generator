@@ -1,0 +1,22 @@
+name: "Podcast Generator"
+author: "Raymond Hedad"
+description: "Generate a feed for a podcast for a YAML file."
+
+runs:
+  using: "docker"
+  image: "DockerFile"
+
+Branding:
+  icon: "git-branch"
+  color: "red"
+
+inputs:
+  email:
+    description: the commiters email
+    required: true
+    default: ${{github.actor}}@localhost
+
+  name:
+    description: the commiters name
+    required: true
+    default: ${{github.actor}}
